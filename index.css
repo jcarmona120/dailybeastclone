@@ -1,0 +1,312 @@
+:root {
+    --card-color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: lightgray;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+p,
+h3 {
+    margin: 0;
+}
+
+img {
+    overflow: hidden;
+    transition: all .5s;
+    max-width: 100%;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('https://www.thedailybeast.com/static/images/logo_2x.f3e6e2ea.png');
+    background-size: 236px 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 2.8rem;
+    padding-bottom: .7em;
+}
+
+.header-title {
+    text-shadow: 2px 2px #ff0000;
+    grid-area: title;
+}
+
+nav {
+    padding-top: 1em;
+    background-color: #242526;
+    padding-bottom: .5em;
+}
+
+nav>a {
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+
+.follow {
+    padding-right: 5em;
+    font-weight: 400;
+}
+
+
+/* #header-follow:hover {
+    transform: translateY(-100px)
+} */
+
+
+/* #header-follow:hover+#header-icons {
+    display: block;
+    opacity: 1;
+} */
+
+#header-follow {
+    transition: 1s;
+}
+
+#header-icons {
+    grid-area: icons;
+    font-size: 2em;
+    display: none;
+    opacity: 0;
+    transition: 1s;
+}
+
+.header-search {
+    grid-area: search;
+    padding-right: 1em;
+}
+
+nav>a {
+    padding: .5em;
+}
+
+.newsGrid {
+    display: grid;
+    grid-template-columns: 41.9% 25.1% 32%;
+    grid-gap: .5em;
+    grid-template-areas: "feature  highlight  normal" "feature  highlight2  normal2" "feature  .  normal3" "feature  .  normal4";
+    margin: .5rem;
+}
+
+.image-container {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.feature {
+    grid-area: feature;
+    width: 100%;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.feature>div {
+    flex: 1;
+}
+
+.highlights>article {
+    flex: 1;
+}
+
+.horizontal>article {
+    flex: 1
+}
+
+.feature-image {
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.feature-title {
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 2rem;
+    padding: .5rem 0;
+}
+
+.feature-image:hover {
+    transform: scale(1.05);
+}
+
+.feature-word {
+    color: red;
+    font-size: .8em;
+    padding-top: 1em;
+}
+
+.feature-description {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: .7em;
+    padding: .9rem 0;
+    line-height: 1.4rem;
+}
+
+.feature-author {
+    font-size: .5em;
+    color: #8F9599;
+    padding-bottom: 2em;
+}
+
+.feature-details {
+    background-color: white;
+    padding: 0 1em;
+    margin: -1em .5em;
+    transform: translateY(-54px);
+}
+
+.highlight-details {
+    padding-left: 1em;
+    background-color: white;
+}
+
+.highlight-description {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: .8em;
+}
+
+#highlight {
+    grid-area: highlight;
+}
+
+#highlight2 {
+    grid-area: highlight2;
+}
+
+.highlight__story {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+.highlight-title {
+    line-height: 24px;
+    padding: .4rem 0;
+}
+
+.highlight-author {
+    color: #8F9599;
+    margin: 0;
+    padding: 0 0 1rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.highlight-word {
+    color: red;
+    padding: .5rem 0 0;
+}
+
+#normal {
+    grid-area: normal;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 1em;
+    background-color: white;
+}
+
+.normal-image {
+    max-width: 80%;
+    margin-left: 2em;
+}
+
+.normal-title {
+    padding: .3rem 0;
+    line-height: 1.4rem;
+    font-size: 1rem;
+}
+
+.normal-author {
+    font-size: .5em;
+    color: #8F9599;
+    font-size: .8rem;
+    padding: .5rem 0;
+    text-transform: uppercase;
+}
+
+.normal-word {
+    color: red;
+    letter-spacing: .1rem;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.horizontal__story {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--card-color);
+    align-items: center;
+    padding: .6rem 1rem;
+    margin-bottom: .5em;
+}
+
+#normal2 {
+    grid-area: normal2;
+}
+
+#normal3 {
+    grid-area: normal3;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--card-color);
+    align-items: center;
+    padding: 1em;
+}
+
+#normal4 {
+    grid-area: normal4;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--card-color);
+}
+
+img {
+    width: 100%;
+}
+
+
+/* TODOS 
+create newsGrid grid layout */
