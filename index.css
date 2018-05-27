@@ -63,6 +63,7 @@ nav {
     padding-top: 1em;
     background-color: #242526;
     padding-bottom: .5em;
+    opacity: .99;
 }
 
 nav>a {
@@ -75,27 +76,28 @@ nav>a {
     font-weight: 400;
 }
 
-
-/* #header-follow:hover {
-    transform: translateY(-100px)
-} */
-
-
-/* #header-follow:hover+#header-icons {
-    display: block;
-    opacity: 1;
-} */
+.header-switch {
+    margin-right: 5em;
+}
 
 #header-follow {
     transition: 1s;
+    transform: translateY(12px)
+}
+
+#header-follow:hover {
+    transform: translateY(-100px)
 }
 
 #header-icons {
     grid-area: icons;
-    font-size: 2em;
-    display: none;
-    opacity: 0;
+    transform: translateY(50px);
+    font-size: 1em;
     transition: 1s;
+}
+
+#header-follow:hover+#header-icons {
+    transform: translateY(-13px)
 }
 
 .header-search {
@@ -223,7 +225,7 @@ nav>a {
 .highlight-author {
     color: #8F9599;
     margin: 0;
-    padding: 0 0 1rem;
+    padding: 0 0 1.5rem;
     text-transform: uppercase;
     font-size: .8rem;
 }

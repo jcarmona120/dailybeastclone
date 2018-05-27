@@ -280,5 +280,5 @@ var followText = document.getElementById('header-follow')
 var followIcons = document.getElementById('header-icons');
 
 followText.addEventListener('click', function() {
-    console.log('boom')
+
 })
